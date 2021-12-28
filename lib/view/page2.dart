@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 // ignore: must_be_immutable
 class PageTow extends StatelessWidget {
   PageTow({Key? key}) : super(key: key);
+
   HomeController controller = Get.find();
   @override
   Widget build(BuildContext context) {
