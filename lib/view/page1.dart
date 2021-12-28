@@ -6,7 +6,8 @@ import 'package:get/get.dart';
 class PageOne extends StatelessWidget {
   PageOne({Key? key}) : super(key: key);
   //permenet to save value in memeory like:signIN , ٍسلة المشتريات
-  HomeController controller = Get.put(HomeController(), permanent: true);
+  // HomeController controller = Get.put(HomeController(), permanent: true);
+  HomeController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {

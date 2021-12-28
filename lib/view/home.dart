@@ -9,6 +9,8 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
+    final controller = Get.lazyPut(() => HomeController());
     return Scaffold(
       appBar: AppBar(
         title: const Text('Dependency-Injection'),
@@ -35,7 +37,7 @@ class Home extends StatelessWidget {
           ),
           MaterialButton(
             onPressed: () {
-              Get.to(() => const PageTow());
+              Get.to(() => PageTow());
             },
             child: const Text(
               'Page2',
