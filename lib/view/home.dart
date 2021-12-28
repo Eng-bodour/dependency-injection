@@ -1,6 +1,7 @@
 import 'package:dependencyinjection/controller/homecontroller.dart';
 import 'package:dependencyinjection/view/page1.dart';
 import 'package:dependencyinjection/view/page2.dart';
+import 'package:dependencyinjection/view/utilis/mybinding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -10,7 +11,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ignore: unused_local_variable
-    final controller = Get.lazyPut(() => HomeController(), fenix: true);
+    final controller = Get.put(() => HomeController());
     return Scaffold(
       appBar: AppBar(
         title: const Text('Dependency-Injection'),
@@ -25,7 +26,7 @@ class Home extends StatelessWidget {
           MaterialButton(
             onPressed: () {
               //for cleare from memory
-              Get.to(() => PageOne());
+              Get.to(() => PageOne(), binding: MyBinding());
             },
             child: const Text(
               'Page1',
@@ -37,7 +38,7 @@ class Home extends StatelessWidget {
           ),
           MaterialButton(
             onPressed: () {
-              Get.to(() => PageTow());
+              Get.to(() => PageTow(), binding: MyBinding());
             },
             child: const Text(
               'Page2',
