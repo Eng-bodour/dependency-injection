@@ -10,7 +10,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ignore: unused_local_variable
-    final controller = Get.lazyPut(() => HomeController());
+    final controller = Get.lazyPut(() => HomeController(), fenix: true);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Dependency-Injection'),
